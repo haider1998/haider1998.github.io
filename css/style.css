@@ -16,7 +16,85 @@
   14. Animations and Effects
   15. Media Queries
 ===================================================================*/
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
 
+.profile-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 0;
+}
+
+/* Fix Skills Section Alignment */
+.skills-card {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Fix Project Cards Alignment */
+.project-card {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.project-image {
+    width: 100%;
+}
+
+/* Fix Timeline Alignment */
+@media (max-width: 768px) {
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        float: none !important;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-marker {
+        display: none;
+    }
+}
+
+/* Fix Contact Section Alignment */
+.contact-info, .contact-form {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* General Responsiveness Fixes */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .hero-name {
+        font-size: 2rem;
+    }
+    
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hero-btns .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
 /*===================================================================
   1. Variables and Base Styles
 ===================================================================*/

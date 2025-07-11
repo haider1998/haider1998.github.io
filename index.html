@@ -2,1488 +2,2182 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-    <title>Syed Mohd Haider Rizvi | Senior Software Engineer</title>
-    <meta name="description" content="Senior Software Engineer specializing in Java, Python, Cloud Architecture, AI applications, and Generative AI with 4 years of experience at HSBC and Ford.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Mohd Haider Rizvi | 🏆 Ford Hackathon Winner | GenAI Architect | Senior Software Engineer</title>
+    <meta name="description" content="🏆 1st Place Ford Hackathon Winner | GenAI Data Platform Architect | Senior Software Engineer specializing in AI, Cloud, and Enterprise Solutions | 10x Data Engineering Acceleration">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS - with correct path -->
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --secondary-blue: #3B82F6;
+            --accent-cyan: #06B6D4;
+            --accent-green: #10B981;
+            --gold: #F59E0B;
+            --award-gold: #FFD700;
+            --dark-bg: #0B0F19;
+            --card-bg: #111827;
+            --card-hover: #1F2937;
+            --text-primary: #F9FAFB;
+            --text-secondary: #E5E7EB;
+            --text-muted: #9CA3AF;
+            --border-color: #374151;
+            --gradient-primary: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-pink) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary-blue) 0%, var(--accent-cyan) 100%);
+            --gradient-accent: linear-gradient(45deg, var(--primary-purple), var(--secondary-blue), var(--accent-cyan), var(--primary-pink));
+            --gradient-success: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-blue) 100%);
+            --gradient-gold: linear-gradient(135deg, var(--award-gold) 0%, var(--gold) 100%);
+            --gradient-rainbow: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff0080);
+            --navbar-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--navbar-height);
+        }
+
+        /* Enhanced Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: var(--dark-bg);
+            overflow: hidden;
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: float 20s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+            top: 10%;
+            left: 5%;
+            animation-duration: 25s;
+        }
+
+        .shape:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+            top: 50%;
+            right: 10%;
+            animation-duration: 30s;
+            animation-direction: reverse;
+        }
+
+        .shape:nth-child(3) {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            bottom: 20%;
+            left: 40%;
+            animation-duration: 35s;
+        }
+
+        .shape:nth-child(4) {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
+            top: 70%;
+            left: 20%;
+            animation-duration: 40s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-30px) rotate(90deg); }
+            50% { transform: translateY(-60px) rotate(180deg); }
+            75% { transform: translateY(-30px) rotate(270deg); }
+        }
+
+        /* Enhanced Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+            height: var(--navbar-height);
+        }
+
+        .navbar.scrolled {
+            background: rgba(11, 15, 25, 0.98);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Orbitron', monospace;
+            position: relative;
+        }
+
+        .nav-logo::after {
+            content: '🏆';
+            position: absolute;
+            top: -5px;
+            right: -25px;
+            font-size: 18px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--award-gold);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-secondary);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Award Banner */
+        .award-banner {
+            position: fixed;
+            top: var(--navbar-height);
+            width: 100%;
+            background: var(--gradient-gold);
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 700;
+            font-size: clamp(12px, 2.5vw, 14px);
+            z-index: 999;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Enhanced Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: radial-gradient(ellipse at center top, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            overflow: hidden;
+            padding-top: calc(var(--navbar-height) + 50px);
+            box-sizing: border-box;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(40px, 8vw, 80px);
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.15);
+            border: 2px solid var(--award-gold);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: clamp(14px, 3vw, 16px);
+            font-weight: 700;
+            color: var(--award-gold);
+            margin-bottom: 25px;
+            animation: goldGlow 2s ease-in-out infinite alternate;
+            backdrop-filter: blur(10px);
+            font-family: 'Orbitron', monospace;
+        }
+
+        @keyframes goldGlow {
+            from { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+            to { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero-title .gradient-text {
+            background: var(--gradient-rainbow);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbowShift 3s ease-in-out infinite;
+        }
+
+        @keyframes rainbowShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .achievement-highlight {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid var(--award-gold);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .achievement-highlight h3 {
+            color: var(--award-gold);
+            font-size: clamp(18px, 4vw, 22px);
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .achievement-highlight p {
+            color: var(--text-secondary);
+            font-size: clamp(14px, 3vw, 16px);
+            line-height: 1.6;
+        }
+
+        .typing-text {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .typing-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: clamp(15px, 3vw, 18px) clamp(25px, 5vw, 35px);
+            font-size: clamp(14px, 2.5vw, 16px);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cta-primary {
+            background: var(--gradient-gold);
+            color: #000;
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.6);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-purple);
+            color: var(--primary-purple);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(139, 92, 246, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Enhanced Profile Image Section */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-container {
+            position: relative;
+            width: clamp(280px, 40vw, 400px);
+            height: clamp(280px, 40vw, 400px);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid transparent;
+            background: var(--gradient-gold);
+            padding: 6px;
+            animation: profileChampionGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes profileChampionGlow {
+            from { box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); }
+            to { box-shadow: 0 0 60px rgba(255, 215, 0, 0.8); }
+        }
+
+        .profile-rings {
+            position: absolute;
+            inset: -25px;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            border-radius: 50%;
+            animation: championRotate 8s linear infinite;
+        }
+
+        .profile-rings::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border: 2px solid rgba(139, 92, 246, 0.2);
+            border-radius: 50%;
+            animation: championRotate 12s linear infinite reverse;
+        }
+
+        .profile-rings::after {
+            content: '🏆';
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            font-size: 30px;
+            animation: trophyFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes championRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes trophyFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Hackathon Achievement Section */
+        .hackathon-section {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-top: 2px solid var(--award-gold);
+            border-bottom: 2px solid var(--award-gold);
+            padding: clamp(80px, 15vw, 120px) 0;
+        }
+
+        .hackathon-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hackathon-badge {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: #000;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: clamp(16px, 4vw, 24px);
+            font-weight: 900;
+            margin-bottom: 30px;
+            font-family: 'Orbitron', monospace;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hackathon-title {
+            font-size: clamp(2.5rem, 7vw, 4rem);
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .hackathon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .hackathon-card {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--award-gold);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hackathon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+            animation: shimmerLine 2s ease-in-out infinite;
+        }
+
+        @keyframes shimmerLine {
+            0%, 100% { transform: scaleX(0); }
+            50% { transform: scaleX(1); }
+        }
+
+        .hackathon-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(255, 215, 0, 0.3);
+        }
+
+        .hackathon-icon {
+            font-size: clamp(40px, 8vw, 60px);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hackathon-card h3 {
+            font-size: clamp(18px, 4vw, 22px);
+            font-weight: 700;
+            color: var(--award-gold);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .hackathon-card p {
+            color: var(--text-muted);
+            font-size: clamp(14px, 3vw, 16px);
+            line-height: 1.6;
+        }
+
+        /* Enhanced Stats Section */
+        .stats-section {
+            background: rgba(31, 41, 55, 0.3);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: clamp(60px, 12vw, 80px) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: clamp(30px, 6vw, 40px);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: clamp(20px, 4vw, 30px);
+            background: rgba(31, 41, 55, 0.6);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--award-gold);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .stat-number {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: clamp(14px, 3vw, 16px);
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* Future Skills Section */
+        .future-skills-section {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+            padding: clamp(80px, 15vw, 120px) 0;
+        }
+
+        .section {
+            padding: clamp(80px, 15vw, 120px) 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: clamp(60px, 12vw, 80px);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            position: relative;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* GenAI Skills Grid */
+        .genai-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: clamp(25px, 5vw, 35px);
+        }
+
+        .skill-category {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(75, 85, 99, 0.5);
+            border-radius: 25px;
+            padding: clamp(30px, 6vw, 40px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-purple);
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.25);
+        }
+
+        .skill-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-category h3 {
+            font-size: clamp(20px, 4vw, 24px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .skill-category .icon {
+            font-size: clamp(24px, 5vw, 28px);
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+        }
+
+        .skill-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: clamp(14px, 3vw, 16px);
+        }
+
+        .skill-level {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--primary-purple);
+            font-size: clamp(12px, 2.5vw, 14px);
+        }
+
+        /* Enhanced Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: clamp(30px, 6vw, 40px);
+        }
+
+        .project-card {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(75, 85, 99, 0.5);
+            border-radius: 25px;
+            padding: clamp(30px, 6vw, 40px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .project-card.featured {
+            border: 2px solid var(--award-gold);
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .project-card.featured::before {
+            background: var(--gradient-gold);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-purple);
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.25);
+        }
+
+        .project-card.featured:hover {
+            border-color: var(--award-gold);
+            box-shadow: 0 25px 50px rgba(255, 215, 0, 0.3);
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: clamp(20px, 4vw, 24px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .project-card.featured .project-title {
+            color: var(--award-gold);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .project-type {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--primary-purple);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: clamp(10px, 2vw, 12px);
+            font-weight: 600;
+            border: 1px solid var(--primary-purple);
+        }
+
+        .project-type.winner {
+            background: rgba(255, 215, 0, 0.2);
+            color: var(--award-gold);
+            border-color: var(--award-gold);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: clamp(14px, 3vw, 16px);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--secondary-blue);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: clamp(10px, 2vw, 12px);
+            font-weight: 500;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .tech-tag.gold {
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--award-gold);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .project-impact {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent-green);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            color: var(--accent-green);
+            font-weight: 600;
+            font-size: clamp(12px, 2.5vw, 14px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(12px, 2.5vw, 14px);
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary-pink);
+        }
+
+        .project-link.gold {
+            color: var(--award-gold);
+        }
+
+        .project-link.gold:hover {
+            color: var(--gold);
+        }
+
+        /* Enhanced Experience Section */
+        .experience-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gradient-accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: clamp(50px, 10vw, 70px);
+            padding-left: 80px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 18px;
+            top: 15px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+        }
+
+        .timeline-marker.current {
+            background: var(--gradient-gold);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+            width: 28px;
+            height: 28px;
+            left: 16px;
+        }
+
+        .timeline-content {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(75, 85, 99, 0.5);
+            border-radius: 20px;
+            padding: clamp(30px, 6vw, 35px);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content.current {
+            border-color: var(--award-gold);
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--primary-purple);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .timeline-content.current:hover {
+            border-color: var(--award-gold);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .timeline-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(12px, 2.5vw, 14px);
+            color: var(--primary-purple);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-date.current {
+            color: var(--award-gold);
+        }
+
+        .timeline-role {
+            font-size: clamp(20px, 4vw, 24px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            font-size: clamp(16px, 3vw, 18px);
+            color: var(--accent-cyan);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-company.current {
+            color: var(--award-gold);
+        }
+
+        .timeline-description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: clamp(14px, 3vw, 16px);
+        }
+
+        .timeline-achievements {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent-green);
+            border-radius: 10px;
+        }
+
+        .timeline-achievements h4 {
+            color: var(--accent-green);
+            font-size: clamp(14px, 3vw, 16px);
+            margin-bottom: 8px;
+        }
+
+        .timeline-achievements p {
+            color: var(--text-secondary);
+            font-size: clamp(12px, 2.5vw, 14px);
+        }
+
+        /* Contact Section Enhancement */
+        .contact-section {
+            background: rgba(17, 24, 39, 0.5);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(30px, 6vw, 40px);
+        }
+
+        .contact-card {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(75, 85, 99, 0.5);
+            border-radius: 25px;
+            padding: clamp(35px, 7vw, 45px);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-purple);
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.2);
+        }
+
+        .contact-icon {
+            font-size: clamp(35px, 7vw, 45px);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .contact-card h3 {
+            font-size: clamp(18px, 4vw, 22px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+            font-size: clamp(14px, 3vw, 16px);
+            line-height: 1.5;
+        }
+
+        .contact-card a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-pink);
+        }
+
+        /* Animation Classes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 215, 0, 0.3);
+            border-top: 4px solid var(--award-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: clamp(16px, 3vw, 18px);
+            color: var(--award-gold);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            :root {
+                --navbar-height: 70px;
+            }
+
+            .navbar {
+                height: var(--navbar-height);
+            }
+
+            .award-banner {
+                top: var(--navbar-height);
+                font-size: 12px;
+                padding: 8px 0;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: calc(var(--navbar-height) + 40px);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--navbar-height) - 40px);
+                background: rgba(11, 15, 25, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                gap: 30px;
+                transition: left 0.3s ease;
+                border-right: 1px solid var(--border-color);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu a {
+                font-size: 20px;
+                padding: 15px 0;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .profile-container {
+                width: clamp(200px, 50vw, 280px);
+                height: clamp(200px, 50vw, 280px);
+            }
+
+            .hero-section {
+                padding-top: calc(var(--navbar-height) + 80px);
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .cta-button {
+                min-width: 200px;
+            }
+
+            .genai-skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hackathon-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-marker {
+                left: 8px;
+            }
+
+            .timeline-marker.current {
+                left: 6px;
+            }
+
+            /* Reduce animations on mobile for better performance */
+            .shape {
+                animation-duration: 30s;
+            }
+        }
+
+        /* Reduced Motion Preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .shape {
+                animation: none;
+            }
+
+            .profile-rings {
+                animation: none;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- Preloader -->
-<div id="preloader">
-    <div class="loader">
-        <svg width="100" height="100" viewBox="0 0 100 100">
-            <circle class="loader-circle" cx="50" cy="50" r="40" />
-            <circle class="loader-circle inner" cx="50" cy="50" r="30" />
-        </svg>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading Champion Portfolio...</div>
+        </div>
     </div>
-</div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="logo-text">SMHR</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#future">Future</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <button class="btn btn-sm mode-toggle" id="dark-mode-toggle">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
+    <!-- Award Banner -->
+    <div class="award-banner">
+        🏆 FORD HACKATHON WINNER | 1ST PLACE | GenAI Data Platform Champion 🏆
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">SMHR</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hackathon">🏆 Hackathon</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">GenAI Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section with Advanced Particle Background -->
-<header id="page-top" class="hero-section">
-    <div id="particles-js"></div>
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-lg-5 text-center text-lg-start mb-5 mb-lg-0" data-aos="fade-right">
-                <div class="profile-card">
-                    <div class="profile-img-wrapper">
-                        <div class="profile-img-container">
-                            <img src="image.png" class="profile-img" alt="Syed Mohd Haider Rizvi">
-                        </div>
-                    </div>
-                    <div class="profile-social-links">
-                        <a href="https://www.linkedin.com/in/s-m-h-rizvi-0a40441ab/" target="_blank" class="profile-social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/haider1998" target="_blank" class="profile-social-link"><i class="fab fa-github"></i></a>
-                        <a href="mailto:syed.mohd.haider.rizvi281@gmail.com" class="profile-social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7" data-aos="fade-left">
-                <div class="hero-content">
-                    <div class="hero-greeting">Hi, I'm</div>
-                    <h1 class="hero-name">Syed Mohd Haider Rizvi</h1>
-                    <div class="hero-title">
-                        <span>Senior Software Engineer</span>
-                        <div class="hero-line"></div>
-                    </div>
-                    <div class="hero-typed-wrapper">
-                        I specialize in <span class="typed" id="typed-text"></span>
-                    </div>
-                    <p class="hero-description">With 4 years of experience building enterprise-level systems, AI solutions, and cloud architectures for the financial sector. Creator of PyVisualizer and PipelineIQ, open-source tools enhancing developer productivity and system performance.</p>
-                    <div class="hero-btns">
-                        <a href="#projects" class="btn btn-primary btn-lg js-scroll-trigger">View My Work</a>
-                        <a href="#contact" class="btn btn-outline-primary btn-lg js-scroll-trigger">Contact Me</a>
-                        <a href="https://github.com/haider1998/haider1998.github.io/blob/main/Updated%20Resume%20Gen%20exp.pdf" class="btn btn-outline-secondary btn-lg" target="_blank">Download Resume</a>
-                    </div>
-                </div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="hero-scroll-indicator">
-        <a href="#about" class="js-scroll-trigger">
-            <div class="scroll-arrow"></div>
-        </a>
-    </div>
-</header>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">🏆 FORD HACKATHON CHAMPION</div>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Syed Mohd Haider Rizvi</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        GenAI Architect & <span class="typing-text" id="typingText">Data Platform Engineer</span><span class="typing-cursor">|</span>
+                    </p>
 
-<!-- About Section -->
-<section id="about" class="about-section">
-    <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-            <span class="subtitle">About Me</span>
-            <h2>My Background</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="about-content" data-aos="fade-up">
-                    <p class="lead-text">I'm a <strong>Senior Software Engineer</strong> passionate about building scalable, efficient solutions that solve complex business problems. With a focus on <strong>Java, Python, cloud technologies and AI</strong>, I've helped organizations optimize their systems and deliver innovative products.</p>
-
-                    <div class="about-cards">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="about-card" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="about-card-icon">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <h3>Technical Excellence</h3>
-                                    <p>I build high-performance, secure, and scalable applications using microservices architecture, cloud platforms, and modern programming languages.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="about-card" data-aos="zoom-in" data-aos-delay="200">
-                                    <div class="about-card-icon">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <h3>Innovation</h3>
-                                    <p>I developed NLP-powered AI solutions that reduced query development time by 80% and created open-source tools for developer productivity.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="about-card" data-aos="zoom-in" data-aos-delay="300">
-                                    <div class="about-card-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <h3>Leadership</h3>
-                                    <p>I've mentored junior engineers, led development of mission-critical sub-products, and collaborated with global teams to deliver business value.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="achievement-highlight">
+                        <h3>🚀 LATEST ACHIEVEMENT</h3>
+                        <p>Just won <strong>1st Place</strong> at Ford's Data Platform Engineering Hackathon with an end-to-end GenAI platform that accelerates data engineering workflows by <strong>10x</strong>!</p>
                     </div>
 
-                    <div class="about-philosophy mt-5">
-                        <h3>My Philosophy</h3>
-                        <p>I believe in delivering solutions that not only meet technical requirements but also drive business value. My approach combines deep technical knowledge with an understanding of business needs, allowing me to build systems that are both innovative and practical.</p>
-                        <p>Whether optimizing existing systems to improve performance or creating new solutions that leverage cutting-edge technologies like AI and cloud computing, I'm committed to excellence in everything I build.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-    <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-            <span class="subtitle">My Expertise</span>
-            <h2>Technical Skills</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="skills-nav-wrapper" data-aos="fade-up">
-            <ul class="nav nav-pills skills-nav justify-content-center" id="skills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="technical-tab" data-bs-toggle="pill" data-bs-target="#technical" type="button" role="tab" aria-controls="technical" aria-selected="true">Technical</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#ai" type="button" role="tab" aria-controls="ai" aria-selected="false">AI & Data</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="cloud-tab" data-bs-toggle="pill" data-bs-target="#cloud" type="button" role="tab" aria-controls="cloud" aria-selected="false">Cloud & DevOps</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="leadership-tab" data-bs-toggle="pill" data-bs-target="#leadership" type="button" role="tab" aria-controls="leadership" aria-selected="false">Leadership</button>
-                </li>
-            </ul>
-        </div>
-
-        <div class="tab-content skills-content mt-4" id="skills-tabContent">
-            <!-- Technical Skills Tab -->
-            <div class="tab-pane fade show active" id="technical" role="tabpanel" aria-labelledby="technical-tab">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up">
-                            <h3 class="skills-card-title">Programming Languages</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Java</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Python</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>SQL</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>JavaScript</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="skills-card-title">Frameworks & Tools</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Spring Boot & Spring Framework</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Docker & Kubernetes</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>FastAPI</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Microservices Architecture</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="skills-card-title">Databases</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>PostgreSQL</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>BigQuery</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>NoSQL</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>CloudSQL</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="skills-card-title">Development Practices</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>RESTful APIs</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>CI/CD</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Unit Testing</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>System Design</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI & Data Tab -->
-            <div class="tab-pane fade" id="ai" role="tabpanel" aria-labelledby="ai-tab">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up">
-                            <h3 class="skills-card-title">Generative AI Skills</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Large Language Models (LLMs)</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Prompt Engineering</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>LangChain</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>RAG (Retrieval Augmented Generation)</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 80%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="skills-card-title">Machine Learning</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Predictive Analytics</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Natural Language Processing</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>ML Model Development</span>
-                                    <span>82%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 82%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Feature Engineering</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="skills-card-title">Data Engineering</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Data Pipelines</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>ETL Processes</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Big Data Processing</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Data Warehousing</span>
-                                    <span>87%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 87%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="skills-card-title">Data Visualization</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Looker</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Data Studio</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>D3.js</span>
-                                    <span>82%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 82%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Dashboard Development</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cloud & DevOps Tab -->
-            <div class="tab-pane fade" id="cloud" role="tabpanel" aria-labelledby="cloud-tab">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up">
-                            <h3 class="skills-card-title">Cloud Platforms</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Google Cloud Platform (GCP)</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Amazon Web Services (AWS)</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Cloud Architecture Design</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Serverless Computing</span>
-                                    <span>82%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 82%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="skills-card-title">DevOps Practices</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>CI/CD Pipelines</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Infrastructure as Code</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Container Orchestration</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Monitoring & Observability</span>
-                                    <span>86%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 86%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="skills-card-title">GCP Services</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Compute Engine</span>
-                                <span class="skill-tag">Google Kubernetes Engine (GKE)</span>
-                                <span class="skill-tag">Cloud Storage</span>
-                                <span class="skill-tag">Cloud SQL</span>
-                                <span class="skill-tag">BigQuery</span>
-                                <span class="skill-tag">Dataflow</span>
-                                <span class="skill-tag">Pub/Sub</span>
-                                <span class="skill-tag">Cloud Functions</span>
-                                <span class="skill-tag">Key Vault</span>
-                                <span class="skill-tag">IAM</span>
-                                <span class="skill-tag">VPC</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="skills-card-title">AWS Services</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">EC2</span>
-                                <span class="skill-tag">S3</span>
-                                <span class="skill-tag">Lambda</span>
-                                <span class="skill-tag">RDS</span>
-                                <span class="skill-tag">DynamoDB</span>
-                                <span class="skill-tag">EKS</span>
-                                <span class="skill-tag">CloudFormation</span>
-                                <span class="skill-tag">SQS</span>
-                                <span class="skill-tag">IAM</span>
-                                <span class="skill-tag">VPC</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Leadership Tab -->
-            <div class="tab-pane fade" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up">
-                            <h3 class="skills-card-title">Team Leadership</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Mentoring & Coaching</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Team Coordination</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Knowledge Sharing</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Global Team Collaboration</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="skills-card-title">Project Management</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Agile Methodologies</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>End-to-End Delivery</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Requirements Gathering</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Risk Management</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="skills-card-title">Strategic Thinking</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Business Problem Solving</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Technology Evaluation</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Process Optimization</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Technical Vision</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skills-card" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="skills-card-title">Communication & Stakeholder Management</h3>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Technical Communication</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Cross-functional Collaboration</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Business Stakeholder Management</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Documentation & Knowledge Sharing</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 92%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-            <span class="subtitle">My Work</span>
-            <h2>Featured Projects</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="projects-filter text-center" data-aos="fade-up">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="open-source">Open Source</button>
-            <button class="filter-btn" data-filter="enterprise">Enterprise</button>
-            <button class="filter-btn" data-filter="ai">AI & ML</button>
-            <button class="filter-btn" data-filter="data">Data Engineering</button>
-        </div>
-
-        <div class="row projects-container">
-            <!-- PyVisualizer Project -->
-            <div class="col-lg-6 project-item" data-category="open-source ai" data-aos="fade-up">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background-color: #3E92CC;">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>PyVisualizer</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link-btn" data-bs-toggle="modal" data-bs-target="#projectModal1">
-                                <i class="fas fa-info-circle"></i> Details
-                            </a>
-                            <a href="#" class="project-link-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="project-link-btn">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">PyVisualizer</h3>
-                        <p class="project-description">An architectural intelligence tool that transforms Python codebases into interactive diagrams, leveraging AST parsing and D3.js visualizations.</p>
-                        <div class="project-tech">
-                            <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">D3.js</span>
-                            <span class="project-tech-item">AST</span>
-                            <span class="project-tech-item">Open Source</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PipelineIQ Project -->
-            <div class="col-lg-6 project-item" data-category="open-source data ai" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background-color: #5C4EE5;">
-                            <i class="fas fa-database"></i>
-                            <span>PipelineIQ</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link-btn" data-bs-toggle="modal" data-bs-target="#projectModal2">
-                                <i class="fas fa-info-circle"></i> Details
-                            </a>
-                            <a href="#" class="project-link-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="project-link-btn">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">PipelineIQ</h3>
-                        <p class="project-description">An AI-powered platform providing predictive intelligence for BigQuery workflows with ML models that predict query performance with up to 84% accuracy.</p>
-                        <div class="project-tech">
-                            <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">Machine Learning</span>
-                            <span class="project-tech-item">BigQuery</span>
-                            <span class="project-tech-item">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Business Finance Management Project -->
-            <div class="col-lg-6 project-item" data-category="enterprise data" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background-color: #E63946;">
-                            <i class="fas fa-chart-line"></i>
-                            <span>BFM</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link-btn" data-bs-toggle="modal" data-bs-target="#projectModal3">
-                                <i class="fas fa-info-circle"></i> Details
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Business Finance Management (HSBC)</h3>
-                        <p class="project-description">A scalable product for transaction categorization, cash flow analysis, and management, improving financial insights for 500K+ businesses.</p>
-                        <div class="project-tech">
-                            <span class="project-tech-item">Java</span>
-                            <span class="project-tech-item">Spring Boot</span>
-                            <span class="project-tech-item">GCP</span>
-                            <span class="project-tech-item">Microservices</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MI Dashboard Project -->
-            <div class="col-lg-6 project-item" data-category="enterprise data" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background-color: #2A9D8F;">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>MI Dashboard</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link-btn" data-bs-toggle="modal" data-bs-target="#projectModal4">
-                                <i class="fas fa-info-circle"></i> Details
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">MI Dashboard (HSBC)</h3>
-                        <p class="project-description">A comprehensive dashboard for business decision-making using BigQuery, Dataflow, and Looker, enabling real-time, data-driven financial insights with 0 error rate.</p>
-                        <div class="project-tech">
-                            <span class="project-tech-item">BigQuery</span>
-                            <span class="project-tech-item">Dataflow</span>
-                            <span class="project-tech-item">Looker</span>
-                            <span class="project-tech-item">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NLP SQL Generator Project -->
-            <div class="col-lg-6 project-item" data-category="enterprise ai" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background-color: #8338EC;">
-                            <i class="fas fa-robot"></i>
-                            <span>NLP SQL Generator</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link-btn" data-bs-toggle="modal" data-bs-target="#projectModal5">
-                                <i class="fas fa-info-circle"></i> Details
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">NLP SQL Generator (HSBC)</h3>
-                        <p class="project-description">An AI solution enabling users to generate SQL queries via natural language, reducing development time by 80% and improving data accessibility.</p>
-                        <div class="project-tech">
-                            <span class="project-tech-item">OpenAI</span>
-                            <span class="project-tech-item">LangChain</span>
-                            <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">NLP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Automated Data Feed Tool Project -->
-            <div class="col-lg-6 project-item" data-category="enterprise data" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background-color: #F77F00;">
-                            <i class="fas fa-cogs"></i>
-                            <span>Data Feed Automation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link-btn" data-bs-toggle="modal" data-bs-target="#projectModal6">
-                                <i class="fas fa-info-circle"></i> Details
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated Data Feed Tool (Ford)</h3>
-                        <p class="project-description">A web-based automation tool that reduced manual feed setup time from 3-5 hours to 30 seconds, resulting in $120,000 in annual cost savings.</p>
-                        <div class="project-tech">
-                            <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">GCP</span>
-                            <span class="project-tech-item">Automation</span>
-                            <span class="project-tech-item">Web APIs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="experience-section">
-    <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-            <span class="subtitle">My Journey</span>
-            <h2>Professional Experience</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="timeline" data-aos="fade-up">
-            <!-- Ford Experience -->
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content" data-aos="fade-right">
-                    <div class="timeline-date">August 2024 - Present</div>
-                    <h3 class="timeline-title">Senior Software Engineer</h3>
-                    <h4 class="timeline-company"><i class="fas fa-building"></i> Ford, Chennai, India</h4>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Spearheaded the development of a large-scale data product handling 25 PB of data, focusing on feeds processing, prediction and scalability.</li>
-                            <li>Developed a web-based automation tool within a limited timeframe, reducing manual feed setup time from 3-5 hours to 30 seconds, resulting in $120,000 in annual cost savings.</li>
-                            <li>Collaborate with global teams and report directly to the Global Manager (USA), ensuring alignment on project goals and delivering high-quality, scalable solutions that meet business objectives.</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-tags">
-                        <span class="timeline-tag">Java</span>
-                        <span class="timeline-tag">Python</span>
-                        <span class="timeline-tag">GCP</span>
-                        <span class="timeline-tag">Cloud</span>
-                        <span class="timeline-tag">Automation</span>
-                        <span class="timeline-tag">JUnit</span>
-                        <span class="timeline-tag">Mockito</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HSBC Experience -->
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content" data-aos="fade-left">
-                    <div class="timeline-date">January 2022 - August 2024</div>
-                    <h3 class="timeline-title">Senior Software Engineer</h3>
-                    <h4 class="timeline-company"><i class="fas fa-building"></i> HSBC, Pune, India</h4>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Led the design and development of enterprise-level microservice applications for Kinetic, generating over $1 billion annual turnover.</li>
-                            <li>Developed NLP-powered AI solutions using OpenAI's GPT models, integrated with enterprise data pipelines, enabling users to create SQL queries via natural language, reducing development time by 80% and improving data accessibility for financial reporting.</li>
-                            <li>Enhanced API performance by 5x, enabling faster transactions for 300,000 business customers.</li>
-                            <li>Optimized microservice architecture, reducing infrastructure costs by 20% while ensuring high availability and compliance with financial industry regulations.</li>
-                            <li>Collaborated with global teams to deliver end-to-end scalable cloud solutions using GCP, Docker, Kubernetes, and CloudSQL, enabling seamless CI/CD pipelines and reducing deployment time.</li>
-                            <li>Mentored new joiners and juniors, providing guidance on development best practices and financial technologies.</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-tags">
-                        <span class="timeline-tag">Java</span>
-                        <span class="timeline-tag">Spring Boot</span>
-                        <span class="timeline-tag">Microservices</span>
-                        <span class="timeline-tag">GCP</span>
-                        <span class="timeline-tag">Docker</span>
-                        <span class="timeline-tag">Kubernetes</span>
-                        <span class="timeline-tag">CloudSQL</span>
-                        <span class="timeline-tag">BigQuery</span>
-                        <span class="timeline-tag">OpenAI</span>
-                        <span class="timeline-tag">NLP</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cognizant Experience -->
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content" data-aos="fade-right">
-                    <div class="timeline-date">August 2021 - January 2022</div>
-                    <h3 class="timeline-title">Programmer Analyst Trainee</h3>
-                    <h4 class="timeline-company"><i class="fas fa-building"></i> Cognizant, Bengaluru, India</h4>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Implemented Big Data solutions using Java, SQL, Hadoop, and AWS for a leading US insurance company, contributing to improved data processing and analytical capabilities.</li>
-                            <li>Initiated a knowledge-sharing forum for new engineers, fostering collaboration and accelerating the adoption of new technologies.</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-tags">
-                        <span class="timeline-tag">Java</span>
-                        <span class="timeline-tag">SQL</span>
-                        <span class="timeline-tag">Hadoop</span>
-                        <span class="timeline-tag">AWS</span>
-                        <span class="timeline-tag">Big Data</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education -->
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content" data-aos="fade-left">
-                    <div class="timeline-date">August 2017 - August 2021</div>
-                    <h3 class="timeline-title">Bachelor of Technology</h3>
-                    <h4 class="timeline-company"><i class="fas fa-university"></i> SRM CEM, IIT Madras (Deep Learning)</h4>
-                    <div class="timeline-description">
-                        <p>Major in Computer Science and Engineering</p>
-                        <p><strong>Achievement:</strong> Won Best Project Award</p>
-                    </div>
-                    <div class="timeline-tags">
-                        <span class="timeline-tag">Computer Science</span>
-                        <span class="timeline-tag">Engineering</span>
-                        <span class="timeline-tag">IIT Madras</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Future Skills Section -->
-<section id="future" class="future-section">
-    <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-            <span class="subtitle">Looking Forward</span>
-            <h2>Future-Ready Skills</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="future-content" data-aos="fade-up">
-                    <p class="lead-text">As technology continues to evolve, I'm committed to staying at the forefront of innovation, focusing on skills that are critical for top tech companies like Google, Microsoft, Amazon, and Apple:</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="future-card">
-                    <div class="future-card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Advanced AI & ML</h3>
-                    <ul class="future-list">
-                        <li>Large Language Model Fine-tuning</li>
-                        <li>Retrieval-Augmented Generation (RAG)</li>
-                        <li>Multimodal AI Systems</li>
-                        <li>AI Agents & Automation</li>
-                        <li>Responsible AI Development</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="future-card">
-                    <div class="future-card-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Distributed Systems</h3>
-                    <ul class="future-list">
-                        <li>Large-Scale System Design</li>
-                        <li>High-Performance Computing</li>
-                        <li>Zero-Trust Architecture</li>
-                        <li>Multi-Cloud Solutions</li>
-                        <li>Edge Computing Integration</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="future-card">
-                    <div class="future-card-icon">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h3>Leadership Excellence</h3>
-                    <ul class="future-list">
-                        <li>Strategic Technical Direction</li>
-                        <li>Cross-Functional Team Leadership</li>
-                        <li>Building Technical Competency</li>
-                        <li>Innovation Management</li>
-                        <li>Technical Communication</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="future-card">
-                    <div class="future-card-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>System Architecture</h3>
-                    <ul class="future-list">
-                        <li>Event-Driven Architecture</li>
-                        <li>Serverless Computing</li>
-                        <li>Microservices at Scale</li>
-                        <li>Data Mesh Architecture</li>
-                        <li>Real-Time Processing Systems</li>
-                        <li>Resilient System Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="future-card">
-                    <div class="future-card-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation Mindset</h3>
-                    <ul class="future-list">
-                        <li>Product Thinking</li>
-                        <li>User-Centered Design</li>
-                        <li>Rapid Prototyping</li>
-                        <li>Technical Vision Development</li>
-                        <li>Emerging Technology Evaluation</li>
-                        <li>Open Source Contribution</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-10">
-                <div class="future-mindset" data-aos="fade-up">
-                    <h3>My Growth Philosophy</h3>
-                    <p>I believe that the most valuable engineers don't just master today's technologies, but develop the adaptability to embrace future innovations. My approach combines continuous learning, first-principles thinking, and a focus on creating sustainable value through technology.</p>
-                    <p>As I continue my professional journey, I'm particularly excited about contributing to AI systems that augment human capabilities, building cloud architectures that enable global scale, and developing solutions that create meaningful impact while maintaining the highest standards of security, privacy, and ethical responsibility.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-            <span class="subtitle">Get In Touch</span>
-            <h2>Contact Me</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-5" data-aos="fade-right">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in hearing about new projects, opportunities, and connections.</p>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <p><a href="mailto:syed.mohd.haider.rizvi281@gmail.com">syed.mohd.haider.rizvi281@gmail.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Phone</h4>
-                            <p><a href="tel:+919335231073">+91 933-523-1073</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Bengaluru, India</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <h4>Find Me Online</h4>
-                        <div class="social-icons">
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-medium"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-7" data-aos="fade-left">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="John Doe" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Your Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <div id="form-message" class="mt-3"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="footer-info">
-                    <h3>Syed Mohd Haider Rizvi</h3>
-                    <p>Senior Software Engineer specializing in Java, Python, Cloud & AI with 4 years of experience building enterprise-level systems.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#page-top" class="js-scroll-trigger">Home</a></li>
-                        <li><a href="#about" class="js-scroll-trigger">About</a></li>
-                        <li><a href="#skills" class="js-scroll-trigger">Skills</a></li>
-                        <li><a href="#projects" class="js-scroll-trigger">Projects</a></li>
-                        <li><a href="#experience" class="js-scroll-trigger">Experience</a></li>
-                        <li><a href="#contact" class="js-scroll-trigger">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="footer-newsletter">
-                    <h4>Looking for a Resume?</h4>
-                    <p>Download my resume for a detailed overview of my skills and experience.</p>
-                    <a href="https://github.com/haider1998/haider1998.github.io/blob/main/Updated%20Resume%20Gen%20exp.pdf" class="btn btn-outline-light" target="_blank">Download Resume</a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>&copy; 2025 Syed Mohd Haider Rizvi. All rights reserved.</p>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <div class="credits">
-                        <a href="#page-top" class="back-to-top js-scroll-trigger">
-                            <i class="fas fa-arrow-up"></i>
+                    <div class="hero-cta">
+                        <a href="#hackathon" class="cta-button cta-primary">
+                            🏆 View Winning Project
+                        </a>
+                        <a href="#contact" class="cta-button cta-secondary">
+                            🚀 Let's Collaborate
                         </a>
                     </div>
                 </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-rings"></div>
+                        <img src="image.png" alt="Syed Mohd Haider Rizvi - Ford Hackathon Winner" class="profile-image">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<!-- Project Modals -->
-<!-- PyVisualizer Modal -->
-<div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="projectModalLabel1">PyVisualizer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="project-modal-content">
-                    <div class="project-modal-image">
-                        <div class="project-placeholder large" style="background-color: #3E92CC;">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>PyVisualizer</span>
-                        </div>
+    <!-- Hackathon Achievement Section -->
+    <section class="hackathon-section" id="hackathon">
+        <div class="container">
+            <div class="hackathon-content animate-on-scroll">
+                <div class="hackathon-badge">🏆 FORD DPE HACKATHON WINNER</div>
+                <h2 class="hackathon-title">GAME-CHANGING GenAI DATA PLATFORM</h2>
+                <p style="font-size: clamp(16px, 3vw, 20px); color: var(--text-muted); max-width: 800px; margin: 0 auto 40px; line-height: 1.6;">
+                    Built a comprehensive GenAI-powered platform that revolutionizes data engineering workflows,
+                    earning recognition from Ford's top leadership and demonstrating the future of intelligent data platforms.
+                </p>
+
+                <div class="hackathon-grid">
+                    <div class="hackathon-card animate-on-scroll">
+                        <span class="hackathon-icon">⚡</span>
+                        <h3>Pipeline Optimization Engine</h3>
+                        <p>Automatically analyzes and optimizes data pipelines for maximum efficiency using advanced ML algorithms</p>
                     </div>
 
-                    <div class="project-modal-details">
-                        <h3>Project Overview</h3>
-                        <p>PyVisualizer is an open-source architectural intelligence tool that transforms Python codebases into interactive diagrams. It uses Abstract Syntax Tree (AST) parsing to analyze code structure and D3.js to create dynamic visualizations that help developers understand complex codebases quickly.</p>
+                    <div class="hackathon-card animate-on-scroll">
+                        <span class="hackathon-icon">📊</span>
+                        <h3>Predictive Cost Analytics</h3>
+                        <p>Forecasts pipeline performance, processing volumes, and associated costs before production deployment</p>
+                    </div>
 
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li>Interactive code structure visualization using D3.js</li>
-                            <li>Module dependency mapping and visualization</li>
-                            <li>Code complexity analysis and metrics</li>
-                            <li>Customizable visualization themes and layouts</li>
-                            <li>Integration with popular IDEs and CI/CD pipelines</li>
-                        </ul>
+                    <div class="hackathon-card animate-on-scroll">
+                        <span class="hackathon-icon">💰</span>
+                        <h3>Comprehensive Cost Dashboard</h3>
+                        <p>Real-time overview of project costs across all pipelines and workloads with intelligent insights</p>
+                    </div>
 
-                        <h3>Technologies Used</h3>
-                        <div class="project-tech">
-                            <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">JavaScript</span>
-                            <span class="project-tech-item">D3.js</span>
-                            <span class="project-tech-item">Abstract Syntax Tree</span>
-                            <span class="project-tech-item">Flask</span>
-                            <span class="project-tech-item">React</span>
+                    <div class="hackathon-card animate-on-scroll">
+                        <span class="hackathon-icon">🎯</span>
+                        <h3>ROI Intelligence System</h3>
+                        <p>Delivers detailed analysis on pipeline performance and recommends optimization strategies</p>
+                    </div>
+
+                    <div class="hackathon-card animate-on-scroll">
+                        <span class="hackathon-icon">🔧</span>
+                        <h3>Full-Stack Implementation</h3>
+                        <p>End-to-end solution built with GenAI, GCP, BigQuery, and Python in a limited timeframe</p>
+                    </div>
+
+                    <div class="hackathon-card animate-on-scroll">
+                        <span class="hackathon-icon">🚀</span>
+                        <h3>10x Workflow Acceleration</h3>
+                        <p>Enables teams to build, optimize, and deploy pipelines at unprecedented speed and efficiency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Stats Section -->
+    <section class="stats-section" id="about">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">Hackathon Victory</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">x Workflow Speed</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">K+ Users Impacted</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="120">0</span>
+                    <span class="stat-label">K$ Cost Savings</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-target="80">0</span>
+                    <span class="stat-label">% Time Reduction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future-Ready GenAI Skills Section -->
+    <section class="section future-skills-section" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Future-Ready GenAI Expertise</h2>
+                <p class="section-subtitle">
+                    Pioneering skills for the next generation of AI-powered enterprise solutions
+                </p>
+            </div>
+
+            <div class="genai-skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <h3><span class="icon">🤖</span> Generative AI & LLMs</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Large Language Models (GPT, Claude)</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Prompt Engineering & Optimization</span>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">RAG (Retrieval Augmented Generation)</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">LangChain & AI Orchestration</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3><span class="icon">⚡</span> Enterprise AI Architecture</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">AI Platform Development</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Intelligent Data Pipelines</span>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Predictive Analytics Systems</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Cost Optimization Intelligence</span>
+                        <span class="skill-level">94%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3><span class="icon">☁️</span> Cloud-Native AI</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Google Cloud AI/ML Services</span>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Serverless AI Architectures</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MLOps & AI/ML Pipelines</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Edge AI & Real-time Processing</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3><span class="icon">🔧</span> Full-Stack Development</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python (FastAPI, Django)</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java & Spring Boot</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Microservices Architecture</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">React & Modern Frontend</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3><span class="icon">📊</span> Data Engineering Excellence</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">BigQuery & Advanced Analytics</span>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Real-time Data Streaming</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">ETL/ELT Pipeline Optimization</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Data Mesh Architecture</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3><span class="icon">🎯</span> Innovation Leadership</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Technical Vision & Strategy</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Cross-functional Team Leadership</span>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Rapid Prototyping & MVP Development</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Business Impact Optimization</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Championship Projects</h2>
+                <p class="section-subtitle">
+                    Award-winning solutions that redefine what's possible with AI and data engineering
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Featured Hackathon Project -->
+                <div class="project-card featured animate-on-scroll">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">GenAI Data Platform</h3>
                         </div>
+                        <span class="project-type winner">🏆 1ST PLACE WINNER</span>
+                    </div>
+                    <p class="project-description">
+                        Revolutionary end-to-end GenAI platform that transforms data engineering workflows.
+                        Features intelligent pipeline optimization, predictive cost analytics, and comprehensive
+                        ROI intelligence, earning Ford's top leadership recognition.
+                    </p>
+                    <div class="project-impact">
+                        💥 IMPACT: 10x workflow acceleration • Predictive cost intelligence • Enterprise-scale deployment
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag gold">GenAI & ML</span>
+                        <span class="tech-tag gold">Google Cloud Platform</span>
+                        <span class="tech-tag gold">BigQuery</span>
+                        <span class="tech-tag gold">Python</span>
+                        <span class="tech-tag gold">Full-Stack</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link gold">🏆 Case Study</a>
+                        <a href="#" class="project-link gold">📊 Technical Deep Dive</a>
+                    </div>
+                </div>
 
-                        <h3>Impact</h3>
-                        <p>PyVisualizer has helped development teams reduce onboarding time for new developers by up to 60%, improve code quality through better understanding of dependencies, and enhance collaboration between team members through shared architectural knowledge.</p>
+                <!-- Other Enhanced Projects -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">PyVisualizer</h3>
+                        </div>
+                        <span class="project-type">Open Source</span>
+                    </div>
+                    <p class="project-description">
+                        Architectural intelligence tool that transforms Python codebases into interactive diagrams,
+                        leveraging AST parsing and D3.js visualizations to enhance code comprehension and team collaboration.
+                    </p>
+                    <div class="project-impact">
+                        📈 60% faster developer onboarding • Enhanced code quality • Open source community adoption
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python AST</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Visualization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 Live Demo</a>
+                        <a href="#" class="project-link">📂 GitHub</a>
+                    </div>
+                </div>
 
-                        <h3>Links</h3>
-                        <div class="project-modal-links">
-                            <a href="#" class="btn btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">PipelineIQ</h3>
+                        </div>
+                        <span class="project-type">AI Platform</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered platform providing predictive intelligence for BigQuery workflows with ML models
+                        that predict query performance with up to 84% accuracy, revolutionizing data engineering efficiency.
+                    </p>
+                    <div class="project-impact">
+                        🎯 84% prediction accuracy • Automated optimization • Cost reduction insights
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Predictive Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 Platform Demo</a>
+                        <a href="#" class="project-link">📊 Performance Metrics</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">NLP SQL Generator</h3>
+                        </div>
+                        <span class="project-type">Enterprise AI</span>
+                    </div>
+                    <p class="project-description">
+                        Revolutionary AI solution enabling users to generate SQL queries via natural language,
+                        reducing development time by 80% and democratizing data access across business teams.
+                    </p>
+                    <div class="project-impact">
+                        ⚡ 80% time reduction • Natural language interface • Enterprise deployment
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">OpenAI GPT</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Enterprise Integration</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">📈 Business Impact</a>
+                        <a href="#" class="project-link">🔧 Technical Architecture</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">Automated Data Feed Tool</h3>
+                        </div>
+                        <span class="project-type">Automation Champion</span>
+                    </div>
+                    <p class="project-description">
+                        Game-changing automation tool at Ford that reduced manual feed setup time from 3-5 hours
+                        to 30 seconds, delivering massive efficiency gains and cost savings across the organization.
+                    </p>
+                    <div class="project-impact">
+                        💰 $120K annual savings • 600x faster setup • Process transformation
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">ROI Optimization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">💰 ROI Analysis</a>
+                        <a href="#" class="project-link">⚡ Performance Metrics</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">Business Finance Management</h3>
+                        </div>
+                        <span class="project-type">Enterprise Scale</span>
+                    </div>
+                    <p class="project-description">
+                        Scalable financial intelligence platform at HSBC for transaction categorization and cash flow analysis,
+                        providing actionable insights for 500K+ businesses and generating $1B+ annual turnover.
+                    </p>
+                    <div class="project-impact">
+                        🌍 500K+ businesses served • $1B+ turnover • 5x API performance boost
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java Spring Boot</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Financial Tech</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">📊 Business Impact</a>
+                        <a href="#" class="project-link">🏗️ Architecture Overview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Championship Journey</h2>
+                <p class="section-subtitle">
+                    Building award-winning solutions across financial services and automotive industries
+                </p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker current"></div>
+                    <div class="timeline-content current">
+                        <div class="timeline-date current">August 2024 - Present</div>
+                        <h3 class="timeline-role">Senior Software Engineer</h3>
+                        <h4 class="timeline-company current">Ford Motor Company</h4>
+                        <p class="timeline-description">
+                            Leading development of large-scale data products handling 25 PB of data. Built automation tools
+                            resulting in $120,000 annual cost savings. Collaborating with global teams and reporting directly
+                            to Global Manager (USA) to deliver scalable solutions.
+                        </p>
+                        <div class="timeline-achievements">
+                            <h4>🏆 Latest Achievement</h4>
+                            <p>Won 1st Place at Ford DPE Hackathon with GenAI Data Platform, earning recognition from top leadership</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 2022 - August 2024</div>
+                        <h3 class="timeline-role">Senior Software Engineer</h3>
+                        <h4 class="timeline-company">HSBC Bank</h4>
+                        <p class="timeline-description">
+                            Led design and development of enterprise microservice applications generating $1B+ annual turnover.
+                            Developed NLP-powered AI solutions reducing development time by 80%. Enhanced API performance by 5x
+                            for 300,000+ business customers while mentoring junior engineers.
+                        </p>
+                        <div class="timeline-achievements">
+                            <h4>🎯 Key Impact</h4>
+                            <p>Created NLP SQL Generator that democratized data access and revolutionized business intelligence workflows</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2021 - January 2022</div>
+                        <h3 class="timeline-role">Programmer Analyst Trainee</h3>
+                        <h4 class="timeline-company">Cognizant</h4>
+                        <p class="timeline-description">
+                            Implemented Big Data solutions using Java, SQL, Hadoop, and AWS for leading US insurance company.
+                            Initiated knowledge-sharing forum for new engineers, fostering collaboration and accelerating
+                            technology adoption across teams.
+                        </p>
+                        <div class="timeline-achievements">
+                            <h4>🚀 Innovation</h4>
+                            <p>Established knowledge-sharing culture that improved team productivity and technology adoption</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2017 - August 2021</div>
+                        <h3 class="timeline-role">Bachelor of Technology</h3>
+                        <h4 class="timeline-company">SRM CEM, IIT Madras</h4>
+                        <p class="timeline-description">
+                            Computer Science and Engineering with specialization in Deep Learning.
+                            Developed strong foundation in AI/ML technologies and software engineering principles.
+                        </p>
+                        <div class="timeline-achievements">
+                            <h4>🏆 Academic Excellence</h4>
+                            <p>Won Best Project Award for innovative AI solution, demonstrating early leadership in technology innovation</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Other Project Modals would follow the same structure -->
+    <!-- Enhanced Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Let's Build the Future Together</h2>
+                <p class="section-subtitle">
+                    Ready to collaborate on groundbreaking AI and data engineering solutions? Let's connect!
+                </p>
+            </div>
 
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="contact-grid">
+                <div class="contact-card animate-on-scroll">
+                    <span class="contact-icon">📧</span>
+                    <h3>Email</h3>
+                    <p><a href="mailto:syed.mohd.haider.rizvi281@gmail.com">syed.mohd.haider.rizvi281@gmail.com</a></p>
+                </div>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <div class="contact-card animate-on-scroll">
+                    <span class="contact-icon">📱</span>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+919335231073">+91 933-523-1073</a></p>
+                </div>
 
-<!-- Typed.js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <div class="contact-card animate-on-scroll">
+                    <span class="contact-icon">💼</span>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/s-m-h-rizvi-0a40441ab/" target="_blank">Professional Network</a></p>
+                </div>
 
-<!-- AOS Animation Library -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <div class="contact-card animate-on-scroll">
+                    <span class="contact-icon">🚀</span>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/haider1998" target="_blank">Code Repository</a></p>
+                </div>
 
-<!-- Particles.js -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+                <div class="contact-card animate-on-scroll">
+                    <span class="contact-icon">📍</span>
+                    <h3>Location</h3>
+                    <p>Bengaluru, India<br><small>Open to Remote & Relocation</small></p>
+                </div>
 
-<!-- Make sure your script.js reference is correct -->
-<script src="./js/script.js"></script>
+                <div class="contact-card animate-on-scroll">
+                    <span class="contact-icon">📄</span>
+                    <h3>Resume</h3>
+                    <p><a href="https://github.com/haider1998/haider1998.github.io/blob/main/Updated%20Resume%20Gen%20exp.pdf" target="_blank">Download Champion CV</a></p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(255, 215, 0, 0.1); border: 1px solid var(--award-gold); border-radius: 20px;">
+                <h3 style="color: var(--award-gold); font-size: clamp(20px, 4vw, 24px); margin-bottom: 15px; font-family: 'Orbitron', monospace;">🚀 Ready to Innovate?</h3>
+                <p style="color: var(--text-muted); font-size: clamp(16px, 3vw, 18px); line-height: 1.6;">
+                    Looking for a GenAI architect who can deliver award-winning solutions?
+                    Let's discuss how we can build the future of intelligent data platforms together!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Remove loading overlay
+        window.addEventListener('load', () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 500);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        navMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Enhanced typing animation
+        const typingTexts = [
+            'Data Platform Engineer',
+            'GenAI Architect',
+            'Full-Stack Developer',
+            'AI Innovation Leader',
+            'Cloud Solutions Expert',
+            'Hackathon Champion'
+        ];
+
+        let currentTextIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typingText');
+
+        function type() {
+            const currentText = typingTexts[currentTextIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+
+                if (currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
+                    setTimeout(type, 500);
+                    return;
+                }
+            } else {
+                typingElement.textContent = currentText.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+
+                if (currentCharIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000);
+                    return;
+                }
+            }
+
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+
+        // Start typing animation
+        setTimeout(type, 1000);
+
+        // Animated Counter for Stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    start = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(start);
+            }, 16);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+
+                    // Animate counters for stats
+                    if (entry.target.classList.contains('stat-item')) {
+                        const numberElement = entry.target.querySelector('.stat-number');
+                        const target = parseInt(numberElement.getAttribute('data-target'));
+                        animateCounter(numberElement, target);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced particle system for desktop
+        function createChampionParticle() {
+            if (window.innerWidth < 768) return;
+
+            const particle = document.createElement('div');
+            const isGold = Math.random() > 0.7;
+
+            particle.style.position = 'absolute';
+            particle.style.width = isGold ? '4px' : '3px';
+            particle.style.height = isGold ? '4px' : '3px';
+            particle.style.background = isGold ? 'var(--award-gold)' : 'var(--primary-purple)';
+            particle.style.borderRadius = '50%';
+            particle.style.opacity = isGold ? '0.8' : '0.6';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = window.innerHeight + 'px';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '1';
+
+            if (isGold) {
+                particle.style.boxShadow = '0 0 10px var(--award-gold)';
+            }
+
+            document.querySelector('.animated-bg').appendChild(particle);
+
+            const animation = particle.animate([
+                { transform: 'translateY(0px)', opacity: isGold ? 0.8 : 0.6 },
+                { transform: `translateY(-${window.innerHeight + 100}px)`, opacity: 0 }
+            ], {
+                duration: Math.random() * 3000 + 2000,
+                easing: 'linear'
+            });
+
+            animation.onfinish = () => particle.remove();
+        }
+
+        // Create particles periodically (only on desktop)
+        if (window.innerWidth >= 768) {
+            setInterval(createChampionParticle, 2000);
+        }
+
+        // Handle resize events
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }, 250);
+        });
+
+        // Prevent zoom on double tap on iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Add touch feedback for mobile
+        document.querySelectorAll('.cta-button, .skill-category, .project-card, .contact-card, .hackathon-card').forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+
+            element.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+
+        // Add active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add congratulatory confetti effect (optional)
+        function createConfetti() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'fixed';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = '-10px';
+                    confetti.style.width = '10px';
+                    confetti.style.height = '10px';
+                    confetti.style.background = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4'][Math.floor(Math.random() * 5)];
+                    confetti.style.zIndex = '10001';
+                    confetti.style.pointerEvents = 'none';
+                    document.body.appendChild(confetti);
+
+                    const animation = confetti.animate([
+                        { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                        { transform: 'translateY(100vh) rotate(720deg)', opacity: 0 }
+                    ], {
+                        duration: Math.random() * 2000 + 3000,
+                        easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                    });
+
+                    animation.onfinish = () => confetti.remove();
+                }, i * 100);
+            }
+        }
+
+        // Trigger confetti when hackathon section comes into view
+        const hackathonSection = document.getElementById('hackathon');
+        let confettiTriggered = false;
+
+        const confettiObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !confettiTriggered) {
+                    createConfetti();
+                    confettiTriggered = true;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        confettiObserver.observe(hackathonSection);
+    </script>
 </body>
 </html>

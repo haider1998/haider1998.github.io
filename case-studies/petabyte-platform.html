@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study: 25PB Cross-Cloud Data Platform + Feed Automation | Syed Mohd Haider Rizvi</title>
+<meta name="description" content="Architecting a 25PB+ data-pipeline platform with GCP/AWS portability at Ford, and automating feed onboarding from 5 hours to 30 seconds — $120K saved annually.">
+<link rel="canonical" href="https://haider1998.github.io/case-studies/petabyte-platform.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Case Study: 25PB Cross-Cloud Data Platform + Feed Automation">
+<meta property="og:description" content="25PB+ scale with GCP/AWS portability; feed onboarding cut from 5 hours to 30 seconds.">
+<meta property="og:url" content="https://haider1998.github.io/case-studies/petabyte-platform.html">
+<meta property="og:image" content="https://haider1998.github.io/profile.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' fill='%23ffb454' text-anchor='middle'%3E~$%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "25PB cross-cloud data platform + feed automation",
+  "description": "Data-pipeline platform architected for GCP/AWS portability at 25PB+ scale; feed onboarding automated from 5 hours to 30 seconds.",
+  "author": { "@id": "https://haider1998.github.io/#person" },
+  "url": "https://haider1998.github.io/case-studies/petabyte-platform.html",
+  "about": ["Distributed systems", "Data engineering", "Kubernetes", "Cloud architecture"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><span class="sig">haider</span>@portfolio:~$<span class="cursor" aria-hidden="true"></span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li class="nav-ctl">
+          <button class="nav-btn" id="paletteBtn" aria-label="Open command palette">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd">⌘K</span>
+          </button>
+          <button class="nav-btn" id="themeToggle" aria-label="Toggle light and dark theme">
+            <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+            <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="cs-hero">
+  <div class="wrap">
+    <a class="back" href="../index.html#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5m6 6-6-6 6-6"/></svg>cd ../work</a>
+    <p class="cs-kicker">Case study · Ford Motor Company · 2024–2025</p>
+    <h1>25PB cross-cloud data platform &amp; self-service feed onboarding</h1>
+    <p class="sub">Architecting data-pipeline platforms that treat the cloud provider as a replaceable dependency — and turning the platform's slowest human workflow into a 30-second self-service operation.</p>
+    <div class="cs-meta">
+      <div><div class="k">Role</div><div class="v">Senior Software Engineer — platform architecture</div></div>
+      <div><div class="k">Stack</div><div class="v">Java · Spring Boot · Kubernetes · GCP/AWS · BigQuery</div></div>
+      <div><div class="k">Team</div><div class="v">Global, cross-functional · US-based leadership</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-body" style="padding-top:0">
+  <div class="wrap">
+    <div class="cs-stats">
+      <div class="cs-stat"><div class="n">25PB+</div><div class="l">Platform scale with cross-cloud portability</div></div>
+      <div class="cs-stat"><div class="n">5h → 30s</div><div class="l">Feed onboarding time (−99%)</div></div>
+      <div class="cs-stat"><div class="n">$120K</div><div class="l">Saved annually from onboarding automation alone</div></div>
+    </div>
+
+    <h2><span class="n">01</span>The problem</h2>
+    <p>Two problems, one platform. First: enterprise data platforms tend to fuse themselves to one cloud vendor — every pipeline hard-codes provider APIs until migration is fiction. The mandate was a 25PB+ pipeline platform with <strong>genuine GCP/AWS portability</strong>, so workloads could move for cost, resilience, or regulatory reasons.</p>
+    <p>Second: onboarding a new data feed was a <strong>5-hour manual process</strong> — tickets, hand-edited configuration, environment-specific setup, waiting. At enterprise feed volume, that's an engineer's week burned every week, plus every manual step is an incident waiting to happen.</p>
+
+    <h2><span class="n">02</span>Approach</h2>
+    <ul>
+      <li><strong>Portability via abstraction boundaries:</strong> pipelines target a platform interface layer, not provider APIs directly. Provider-specific adapters live at the edges — microservice and distributed-system patterns (idempotent processing, event-driven handoffs) do the rest.</li>
+      <li><strong>Feed onboarding as software, not process:</strong> I rebuilt the manual flow into a self-service system (Java, Spring Boot, Kubernetes) — declarative feed definitions validated and provisioned automatically. A ticket queue became an API call.</li>
+      <li><strong>Reliability as a design input:</strong> at petabyte scale, retry storms and partial failures are the norm; the platform assumes them — checkpointed processing, dead-lettering, and observability wired in from day one.</li>
+    </ul>
+
+    <div class="cs-diagram">
+      <svg viewBox="0 0 760 320" role="img" aria-label="Architecture diagram: data sources flow through a self-service onboarding portal into a platform abstraction layer with pipeline orchestration, which runs on either GCP or AWS through provider adapters, landing in the 25PB warehouse for downstream consumers">
+        <defs>
+          <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 8 4 0 8z" fill="var(--ink-3)"/></marker>
+          <marker id="arrAcc" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 8 4 0 8z" fill="var(--accent)"/></marker>
+        </defs>
+        <rect class="d-box" x="20" y="30" width="130" height="60" rx="10"/>
+        <text class="d-label" x="85" y="55" text-anchor="middle">Data sources</text>
+        <text class="d-sub" x="85" y="73" text-anchor="middle">enterprise feeds</text>
+
+        <rect class="d-box d-box-acc" x="20" y="130" width="130" height="70" rx="10"/>
+        <text class="d-label" x="85" y="158" text-anchor="middle">Self-service</text>
+        <text class="d-label" x="85" y="173" text-anchor="middle">onboarding</text>
+        <text class="d-sub" x="85" y="190" text-anchor="middle">5h → 30s</text>
+
+        <rect class="d-box" x="220" y="70" width="200" height="130" rx="10"/>
+        <text class="d-label" x="320" y="100" text-anchor="middle">Platform layer</text>
+        <text class="d-sub" x="320" y="120" text-anchor="middle">pipeline orchestration</text>
+        <text class="d-sub" x="320" y="138" text-anchor="middle">declarative feed configs</text>
+        <text class="d-sub" x="320" y="156" text-anchor="middle">event-driven · idempotent</text>
+        <text class="d-sub" x="320" y="174" text-anchor="middle">observability</text>
+
+        <rect class="d-box" x="480" y="40" width="110" height="54" rx="10"/>
+        <text class="d-label" x="535" y="62" text-anchor="middle">GCP adapter</text>
+        <text class="d-sub" x="535" y="80" text-anchor="middle">primary</text>
+        <rect class="d-box" x="480" y="112" width="110" height="54" rx="10"/>
+        <text class="d-label" x="535" y="134" text-anchor="middle">AWS adapter</text>
+        <text class="d-sub" x="535" y="152" text-anchor="middle">portable target</text>
+
+        <rect class="d-box d-box-acc" x="480" y="196" width="260" height="60" rx="10"/>
+        <text class="d-label" x="610" y="221" text-anchor="middle">Warehouse — 25PB+</text>
+        <text class="d-sub" x="610" y="239" text-anchor="middle">BigQuery · analytics consumers</text>
+
+        <rect class="d-box" x="640" y="40" width="100" height="126" rx="10"/>
+        <text class="d-label" x="690" y="70" text-anchor="middle">Consumers</text>
+        <text class="d-sub" x="690" y="90" text-anchor="middle">analytics</text>
+        <text class="d-sub" x="690" y="106" text-anchor="middle">ML / agents</text>
+        <text class="d-sub" x="690" y="122" text-anchor="middle">reporting</text>
+
+        <path class="d-edge" d="M150 60 H 200 V 100 H 218"/>
+        <path class="d-edge-acc" d="M150 165 H 218 V 165"/>
+        <path class="d-edge" d="M420 105 H 478 V 67"/>
+        <path class="d-edge" d="M420 139 H 478"/>
+        <path class="d-edge-acc" d="M420 180 H 450 V 226 H 478"/>
+        <path class="d-edge" d="M610 196 V 170 H 638"/>
+      </svg>
+      <p class="cap">provider adapters at the edges — pipelines never touch GCP/AWS APIs directly</p>
+    </div>
+
+    <h2><span class="n">03</span>Key decisions</h2>
+    <ul>
+      <li><strong>Buy portability with an interface, pay for it once.</strong> The abstraction layer costs some indirection up front, but it converts a multi-quarter cloud migration into an adapter swap — and it kept every pipeline testable against a local fake.</li>
+      <li><strong>Declarative feed definitions.</strong> Making onboarding data-driven (validated config in, provisioned feed out) is what allowed 5 hours of expert steps to compress into 30 automated seconds — and made every feed reproducible.</li>
+      <li><strong>Design for the operator, not the demo.</strong> Dead-letter queues, checkpoints, and metrics aren't features anyone asks for until 2 a.m. — building them in first is why the platform holds at 25PB.</li>
+    </ul>
+
+    <h2><span class="n">04</span>Impact</h2>
+    <ul>
+      <li><strong>25PB+ platform</strong> running with genuine cross-cloud portability and enterprise reliability.</li>
+      <li>Feed onboarding: <strong>5 hours → 30 seconds (−99%)</strong>, saving <strong>$120K annually</strong> and removing a full class of manual-error incidents.</li>
+      <li>Delivered with a <strong>global cross-functional team</strong> across India–US time zones; related work took <strong>1st place at Ford's Data Platform Engineering hackathon</strong>.</li>
+    </ul>
+
+    <p class="cs-note">Architecture shown at the pattern level; internal implementation details are generalized to respect Ford confidentiality. Figures are from my resume.</p>
+
+    <div class="cs-next">
+      <p><span class="t">Next case study</span><br>Natural-language → SQL copilot — putting LLMs in front of analysts at HSBC</p>
+      <a class="btn" href="nl2sql-copilot.html">Read it <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:14px;height:14px"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Syed Mohd Haider Rizvi</p>
+    <p><a href="../index.html">home</a> · <a href="mailto:smhrizvi281@gmail.com">smhrizvi281@gmail.com</a></p>
+  </div>
+</footer>
+
+<div id="toast" role="status"></div>
+
+<div class="palette-veil" id="paletteVeil" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="palette">
+    <input id="paletteInput" type="text" placeholder="Type a command or search…" autocomplete="off" spellcheck="false">
+    <div class="palette-list" id="paletteList" role="listbox"></div>
+    <div class="palette-foot"><span>↑↓ navigate</span><span>↵ select</span><span>esc close</span></div>
+  </div>
+</div>
+
+<div class="term-veil" id="termVeil" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+  <div class="term">
+    <div class="term-bar">
+      <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+      <span>haider@portfolio — zsh</span>
+      <button id="termClose" aria-label="Close terminal">×</button>
+    </div>
+    <div class="term-body" id="termBody"></div>
+    <div class="term-input-row">
+      <span class="ps1">haider@portfolio:~$</span>
+      <input id="termInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+    </div>
+  </div>
+</div>
+
+<script src="../js/main.js" defer></script>
+<script src="../js/palette.js" defer></script>
+<script src="../js/terminal.js" defer></script>
+</body>
+</html>

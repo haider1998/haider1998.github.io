@@ -1,0 +1,26 @@
+# Syed Mohd Haider Rizvi — AI Platform Engineer
+
+> Personal portfolio of Syed Mohd Haider Rizvi (Haider Rizvi): AI Platform Engineer with 4.5+ years building agentic AI systems, LLM evaluation frameworks, and petabyte-scale data platforms for global enterprises. Currently Consultant Specialist (AI Products) at HSBC; previously Senior Software Engineer at Ford Motor Company. Based in Pune, India; open to remote work and relocation to the US, UK, and EU (including Ireland and Spain) with visa sponsorship.
+
+Key facts:
+- Built an agentic AI optimizer (LLM agents + BigQuery) at Ford, projected to save $2.4M annually — recognized as Top AI Innovator, Ford 2025
+- Architected 25PB+ data-pipeline platforms with GCP/AWS cross-cloud portability
+- Shipped a natural-language → SQL copilot at HSBC (OpenAI GPT + LangChain), cutting reporting development time 80%
+- Optimized transaction APIs to 5× throughput for 300K+ daily users; 99.9% uptime microservices
+- Building TrueArch: a Model Context Protocol (MCP) server with an A/B evaluation harness (+26% measured code-quality improvement)
+- Skills: agentic AI, LLM evaluation, RAG, MCP, Python, Java, Go, SQL, GCP, AWS, BigQuery, Kubernetes, distributed systems
+- Education: M.Tech Applied AI (VNIT Nagpur), B.Tech CS (SRM CEM) with IIT Madras deep-learning specialization
+- Contact: smhrizvi281@gmail.com
+
+## Pages
+
+- [Portfolio home](https://haider1998.github.io/): profile, selected work, experience, skills, contact
+- [Case study: Agentic BigQuery Optimizer](https://haider1998.github.io/case-studies/agentic-optimizer.html): LLM agents optimizing a 25PB warehouse, $2.4M projected savings
+- [Case study: 25PB Cross-Cloud Platform](https://haider1998.github.io/case-studies/petabyte-platform.html): cross-cloud data platform + feed onboarding automated 5h → 30s
+- [Case study: NL→SQL Copilot](https://haider1998.github.io/case-studies/nl2sql-copilot.html): GPT-powered SQL generation for financial reporting at HSBC
+- [Résumé (PDF)](https://haider1998.github.io/Syed_Mohd_Haider_Rizvi_Resume.pdf)
+
+## Profiles
+
+- [GitHub](https://github.com/haider1998)
+- [LinkedIn](https://www.linkedin.com/in/s-m-h-rizvi-0a40441ab/)

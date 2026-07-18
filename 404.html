@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — command not found | Syed Mohd Haider Rizvi</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' fill='%23ffb454' text-anchor='middle'%3E~$%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<main class="nf">
+  <div class="term" style="height:auto;max-width:560px">
+    <div class="term-bar">
+      <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+      <span>haider@portfolio — zsh</span>
+    </div>
+    <div class="term-body" style="padding:20px 22px">
+      <pre><span class="ps1">haider@portfolio:~$</span> <span class="cmd">open <span id="path404">this-page</span></span>
+zsh: <span class="acc">404: no such file or directory</span>
+
+the page you're looking for doesn't exist —
+but the person you're looking for does.
+
+<span class="ps1">haider@portfolio:~$</span> <span class="cmd">cd ~</span>
+→ <a href="/">back to haider1998.github.io</a></pre>
+    </div>
+  </div>
+</main>
+<script>
+  var p = document.getElementById('path404');
+  if(p) p.textContent = location.pathname.replace(/[^\w\-./]/g,'').slice(0,60) || 'this-page';
+</script>
+</body>
+</html>

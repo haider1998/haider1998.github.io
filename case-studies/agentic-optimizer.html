@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study: Agentic BigQuery Optimizer — $2.4M Projected Savings | Syed Mohd Haider Rizvi</title>
+<meta name="description" content="How LLM agents were used to analyze 25PB+ BigQuery workloads at Ford and automate resource allocation and query optimization — projected $2.4M annual savings.">
+<link rel="canonical" href="https://haider1998.github.io/case-studies/agentic-optimizer.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Case Study: Agentic BigQuery Optimizer — $2.4M Projected Savings">
+<meta property="og:description" content="LLM agents analyzing 25PB+ warehouse workloads, automating resource allocation and query optimization at Ford.">
+<meta property="og:url" content="https://haider1998.github.io/case-studies/agentic-optimizer.html">
+<meta property="og:image" content="https://haider1998.github.io/profile.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' fill='%23ffb454' text-anchor='middle'%3E~$%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Agentic BigQuery Optimizer — $2.4M projected annual savings",
+  "description": "LLM agents that analyze petabyte-scale warehouse workloads and automate resource allocation and query optimization.",
+  "author": { "@id": "https://haider1998.github.io/#person" },
+  "url": "https://haider1998.github.io/case-studies/agentic-optimizer.html",
+  "about": ["AI agents", "BigQuery", "Cost optimization", "LLM applications"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><span class="sig">haider</span>@portfolio:~$<span class="cursor" aria-hidden="true"></span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li class="nav-ctl">
+          <button class="nav-btn" id="paletteBtn" aria-label="Open command palette">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd">⌘K</span>
+          </button>
+          <button class="nav-btn" id="themeToggle" aria-label="Toggle light and dark theme">
+            <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+            <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="cs-hero">
+  <div class="wrap">
+    <a class="back" href="../index.html#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5m6 6-6-6 6-6"/></svg>cd ../work</a>
+    <p class="cs-kicker">Case study · Ford Motor Company · 2024–2025</p>
+    <h1>Agentic BigQuery Optimizer</h1>
+    <p class="sub">LLM agents that read a 25PB+ warehouse's own workload telemetry, reason about waste, and drive resource-allocation and query-optimization decisions — turning cost engineering from a quarterly manual exercise into a continuous, automated loop.</p>
+    <div class="cs-meta">
+      <div><div class="k">Role</div><div class="v">Senior Software Engineer — architecture &amp; build</div></div>
+      <div><div class="k">Stack</div><div class="v">LLM agents · BigQuery · Python · GCP</div></div>
+      <div><div class="k">Recognition</div><div class="v">Top AI Innovator, Ford 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-body" style="padding-top:0">
+  <div class="wrap">
+    <div class="cs-stats">
+      <div class="cs-stat"><div class="n">$2.4M</div><div class="l">Projected annual savings from automated optimization</div></div>
+      <div class="cs-stat"><div class="n">25PB+</div><div class="l">Warehouse scale the agents operate across</div></div>
+      <div class="cs-stat"><div class="n">Continuous</div><div class="l">Optimization loop — replacing periodic manual reviews</div></div>
+    </div>
+
+    <h2><span class="n">01</span>The problem</h2>
+    <p>A data platform at 25PB+ scale accumulates cost pathologies faster than humans can review them: over-provisioned slot reservations, queries scanning far more data than they return, tables partitioned for access patterns that changed a year ago. Each individual issue is findable by a skilled engineer with time; the problem is that there are <strong>thousands of them, they regenerate constantly</strong>, and expert time is the scarcest resource on the team.</p>
+    <p>The insight behind this project: warehouse optimization is fundamentally a <strong>reasoning task over structured telemetry</strong> — exactly the shape of problem LLM agents are good at, if you ground them in real data and constrain what they're allowed to do.</p>
+
+    <h2><span class="n">02</span>Approach</h2>
+    <p>I built an agentic system where LLM agents consume workload metadata — query logs, slot utilization, table/partition statistics — and produce concrete, reviewable optimization actions:</p>
+    <ul>
+      <li><strong>Analysis agents</strong> scan workload telemetry for waste patterns: inefficient query shapes, mis-sized reservations, cold data on hot storage, missing partitioning or clustering.</li>
+      <li><strong>A recommendation layer</strong> converts findings into ranked, costed actions — each with a projected savings estimate, so impact is measurable before anything changes.</li>
+      <li><strong>Guardrails first:</strong> agents propose; changes flow through review and safe application paths. An agent that can silently rewrite production workloads is a liability, not an optimizer.</li>
+      <li><strong>Measurement built in:</strong> every applied optimization is tracked against its projection — the $2.4M figure is a bottom-up sum of measured and projected per-action savings, not a vibe.</li>
+    </ul>
+
+    <div class="cs-diagram">
+      <svg viewBox="0 0 760 300" role="img" aria-label="Architecture diagram: workload telemetry flows into LLM analysis agents, then a recommendation engine with guardrails, producing optimization actions applied to BigQuery, with savings measured in a feedback loop">
+        <defs>
+          <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 8 4 0 8z" fill="var(--ink-3)"/></marker>
+          <marker id="arrAcc" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 8 4 0 8z" fill="var(--accent)"/></marker>
+        </defs>
+        <rect class="d-box" x="20" y="110" width="150" height="80" rx="10"/>
+        <text class="d-label" x="95" y="143" text-anchor="middle">Workload telemetry</text>
+        <text class="d-sub" x="95" y="162" text-anchor="middle">query logs · slots · tables</text>
+
+        <rect class="d-box d-box-acc" x="230" y="110" width="150" height="80" rx="10"/>
+        <text class="d-label" x="305" y="143" text-anchor="middle">Analysis agents</text>
+        <text class="d-sub" x="305" y="162" text-anchor="middle">LLM reasoning over waste</text>
+
+        <rect class="d-box" x="440" y="110" width="150" height="80" rx="10"/>
+        <text class="d-label" x="515" y="143" text-anchor="middle">Recommendations</text>
+        <text class="d-sub" x="515" y="162" text-anchor="middle">ranked · costed actions</text>
+
+        <rect class="d-box" x="440" y="20" width="150" height="60" rx="10"/>
+        <text class="d-label" x="515" y="45" text-anchor="middle">Guardrails</text>
+        <text class="d-sub" x="515" y="63" text-anchor="middle">review · safe application</text>
+
+        <rect class="d-box d-box-acc" x="230" y="222" width="360" height="58" rx="10"/>
+        <text class="d-label" x="410" y="246" text-anchor="middle">BigQuery — 25PB+ platform</text>
+        <text class="d-sub" x="410" y="264" text-anchor="middle">slot allocation · query rewrite · partitioning</text>
+
+        <rect class="d-box" x="640" y="110" width="100" height="80" rx="10"/>
+        <text class="d-label" x="690" y="143" text-anchor="middle">Savings</text>
+        <text class="d-sub" x="690" y="162" text-anchor="middle">$2.4M/yr</text>
+
+        <path class="d-edge" d="M170 150 H 228"/>
+        <path class="d-edge" d="M380 150 H 438"/>
+        <path class="d-edge" d="M515 110 V 82"/>
+        <path class="d-edge-acc" d="M515 190 V 220"/>
+        <path class="d-edge-acc" d="M590 150 H 638"/>
+        <path class="d-edge" d="M228 251 H 95 V 192"/>
+      </svg>
+      <p class="cap">optimization loop: telemetry → agents → guarded actions → measured savings → back to telemetry</p>
+    </div>
+
+    <h2><span class="n">03</span>Key decisions</h2>
+    <ul>
+      <li><strong>Ground agents in telemetry, not prompts about telemetry.</strong> The agents work from actual workload metadata pulled from the warehouse itself — hallucinating an optimization is structurally difficult when every claim must reference a real query or reservation.</li>
+      <li><strong>Costed recommendations over autonomous action.</strong> Attaching a dollar projection to every action made the system legible to leadership and safe to adopt incrementally — trust was earned action by action.</li>
+      <li><strong>Optimize the platform, not one query.</strong> Query-level tuning is a local maximum; the agents also reason about reservations, storage tiering, and partitioning strategy — where the structural savings live.</li>
+    </ul>
+
+    <h2><span class="n">04</span>Impact</h2>
+    <ul>
+      <li><strong>$2.4M projected annual savings</strong> through automated resource allocation and query optimization.</li>
+      <li>Cost review transformed from a periodic expert-driven exercise into a <strong>continuous automated loop</strong>.</li>
+      <li>Recognized as <strong>Top AI Innovator at Ford (2025)</strong>; related work took 1st place at Ford's Data Platform Engineering hackathon.</li>
+    </ul>
+
+    <p class="cs-note">Architecture shown at the pattern level; internal implementation details are generalized to respect Ford confidentiality. Figures are from my resume and internal projections.</p>
+
+    <div class="cs-next">
+      <p><span class="t">Next case study</span><br>25PB cross-cloud data platform — the substrate these agents run on</p>
+      <a class="btn" href="petabyte-platform.html">Read it <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:14px;height:14px"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Syed Mohd Haider Rizvi</p>
+    <p><a href="../index.html">home</a> · <a href="mailto:smhrizvi281@gmail.com">smhrizvi281@gmail.com</a></p>
+  </div>
+</footer>
+
+<div id="toast" role="status"></div>
+
+<div class="palette-veil" id="paletteVeil" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="palette">
+    <input id="paletteInput" type="text" placeholder="Type a command or search…" autocomplete="off" spellcheck="false">
+    <div class="palette-list" id="paletteList" role="listbox"></div>
+    <div class="palette-foot"><span>↑↓ navigate</span><span>↵ select</span><span>esc close</span></div>
+  </div>
+</div>
+
+<div class="term-veil" id="termVeil" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+  <div class="term">
+    <div class="term-bar">
+      <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+      <span>haider@portfolio — zsh</span>
+      <button id="termClose" aria-label="Close terminal">×</button>
+    </div>
+    <div class="term-body" id="termBody"></div>
+    <div class="term-input-row">
+      <span class="ps1">haider@portfolio:~$</span>
+      <input id="termInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+    </div>
+  </div>
+</div>
+
+<script src="../js/main.js" defer></script>
+<script src="../js/palette.js" defer></script>
+<script src="../js/terminal.js" defer></script>
+</body>
+</html>
